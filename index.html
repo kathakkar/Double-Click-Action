@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+          function submitData(){
+            fname=document.getElementById("txtFirstName").value;
+            lname=document.getElementById("txtLastName").value;
+            if(fname==="" || lname===""){
+              alert("Please enter all required fields.");
+            }
+            else{
+              alert("Data submitted successfully");
+            }
+            document.getElementById("txtFirstName").value="";
+            document.getElementById("txtLastName").value="";
+          }
+          
+    </script>
+
+    <style>
+      body{
+        text-align: center
+      }
+      table{
+        border-collapse: collapse;
+        font-size: 16px;
+        font-family: sans-serif;
+        min-width: 400px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.15); 
+        margin-left: auto;
+        margin-right: auto;
+      }
+      table th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: center;
+        background-color: #009879;
+        color: white;
+      }
+      table td {
+        padding: 12px 15px;
+      }
+      table tbody tr {
+        border-bottom: 1px solid #dddddd;
+      }
+
+      table tbody tr:last-of-type {
+        border-bottom: 2px solid #009879;
+      }
+      #btnSubmit {
+        background-color: #009879; /* Green */
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        cursor: pointer;
+      }
+
+    </style>
+</head>
+<body>
+  <table>
+    <tr><th colspan="2">REGISTRATION FORM</th></tr>
+    <tr><td>First Name*</td><td><input id="txtFirstName" type="text" value=""></td></tr>
+    <tr><td>Last Name*</td><td><input id="txtLastName" type="text" value=""></td></tr>
+    <tr><td colspan="2" align="center">Double Click to Submit Data <br><br><input ondblclick=submitData() type="button" value="SUBMIT"  id="btnSubmit"> </td></tr>
+  </table>
+ 
+</body>
+</html>
